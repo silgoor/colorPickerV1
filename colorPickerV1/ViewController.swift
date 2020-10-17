@@ -25,8 +25,7 @@ class ViewController: UIViewController {
         super.viewDidLoad()
         //colorview
         colorView.layer.cornerRadius = 20
-        colorView.backgroundColor = UIColor(red: 1, green: 1,
-                                            blue: 1, alpha: 1)
+        colorView.backgroundColor = UIColor(red: 1, green: 1, blue: 1, alpha: 1)
         
         //label value
         labelRedValue.text = String(round(sliderRed.value))
@@ -39,6 +38,8 @@ class ViewController: UIViewController {
         sliderBlue.minimumTrackTintColor = .blue
       
     }
+    
+    //variables for color state
     var redValue:CGFloat = 1
     var greenValue:CGFloat = 1
     var blueValue:CGFloat = 1
@@ -52,12 +53,12 @@ class ViewController: UIViewController {
     }
     
 
-   
     @IBAction func sliderGreenAction(_ sender: Any) {
         
         labelGreenValue.text = String(round(100*sliderGreen.value)/100)
         greenValue = CGFloat(sliderGreen.value)
-        colorView.backgroundColor = UIColor(red: redValue, green: greenValue, blue: blueValue, alpha: 1)
+        colorView.backgroundColor = UIColor(red: redValue, green: greenValue,
+                                            blue: blueValue, alpha: 1)
     }
     
     @IBAction func sliderBlueAction(_ sender: Any) {
