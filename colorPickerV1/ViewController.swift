@@ -30,9 +30,9 @@ class ViewController: UIViewController {
         
         
         //label value
-        labelRedValue.text = String(format: "%.2f", sliderRed.value)
-        labelGreenValue.text = String(format: "%.2f", sliderGreen.value)
-        labelBlueValue.text = String(format: "%.2f", sliderBlue.value)
+        labelRedValue.text = stringValue(from: sliderRed)
+        labelGreenValue.text = stringValue(from: sliderGreen)
+        labelBlueValue.text = stringValue(from: sliderBlue)
         
         //slider
         sliderRed.minimumTrackTintColor = .red
@@ -46,30 +46,48 @@ class ViewController: UIViewController {
     var greenValue:CGFloat = 1
     var blueValue:CGFloat = 1
     
-    
-    @IBAction func sliderRedAction(_ sender: Any) {
-        labelRedValue.text = String(format: "%.2f", sliderRed.value)
+    //change color
+    @IBAction func slidersChangeColor(_ sender: UISlider) {
         SetColor()
-    }
-    
-
-    @IBAction func sliderGreenAction(_ sender: Any) {
         
-        labelGreenValue.text = String(format: "%.2f", sliderGreen.value)
-        SetColor()
+        switch sender {
+        case sliderRed: labelRedValue.text = stringValue(from: sliderRed)
+        case sliderGreen: labelGreenValue.text = stringValue(from: sliderGreen)
+        case sliderBlue: labelBlueValue.text = stringValue(from: sliderBlue)
+        default:break
+        }
+
+        
+       
+        
+        
     }
     
-    @IBAction func sliderBlueAction(_ sender: Any) {
-        labelBlueValue.text = String(format: "%.2f", sliderBlue.value)
-        SetColor()
-    }
     
-    
-    func SetColor() {
+    private func SetColor() {
         colorView.backgroundColor = UIColor(red: CGFloat(sliderRed.value),
                                             green: CGFloat(sliderGreen.value),
                                             blue: CGFloat(sliderBlue.value),
                                             alpha: 1)
     }
+    
+    
+    private func setValue(for labels: UILabel...) {
+        labels.forEach{ label in
+            switch label.tag {
+            case 0: labelRedValue.text = stringValue(from: sliderRed)
+            case 1: labelGreenValue.text = stringValue(from: sliderGreen)
+            case 2: labelBlueValue.text = stringValue(from: sliderBlue)
+            default: break
+            }
+        }
+            
+        }
+    
+    
+    private func stringValue(from slider:UISlider) -> String {
+        String(format: "%.2f", slider.value)
+    }
+    
 }
 

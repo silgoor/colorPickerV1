@@ -61,13 +61,13 @@
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUP-ze-m7s">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="1" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="yUP-ze-m7s">
                                                 <rect key="frame" x="0.0" y="55" width="48" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-iq-Vpf">
+                                            <label opaque="NO" userInteractionEnabled="NO" tag="2" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AR8-iq-Vpf">
                                                 <rect key="frame" x="0.0" y="110" width="48" height="30"/>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <nil key="textColor"/>
@@ -84,19 +84,19 @@
                                             <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="pga-NE-ftz">
                                                 <rect key="frame" x="-2" y="0.0" width="215" height="31"/>
                                                 <connections>
-                                                    <action selector="sliderRedAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="SC2-KY-B5R"/>
+                                                    <action selector="slidersChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="4Ww-QB-7Ei"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OyK-d1-3O5">
+                                            <slider opaque="NO" tag="1" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="OyK-d1-3O5">
                                                 <rect key="frame" x="-2" y="55" width="215" height="31"/>
                                                 <connections>
-                                                    <action selector="sliderGreenAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="c47-Nm-HUq"/>
+                                                    <action selector="slidersChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="2Ed-Xo-pPH"/>
                                                 </connections>
                                             </slider>
-                                            <slider opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-wH-Anb">
+                                            <slider opaque="NO" tag="2" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" value="0.5" minValue="0.0" maxValue="1" translatesAutoresizingMaskIntoConstraints="NO" id="cdy-wH-Anb">
                                                 <rect key="frame" x="-2" y="110" width="215" height="31"/>
                                                 <connections>
-                                                    <action selector="sliderBlueAction:" destination="BYZ-38-t0r" eventType="valueChanged" id="27G-Yr-MvT"/>
+                                                    <action selector="slidersChangeColor:" destination="BYZ-38-t0r" eventType="valueChanged" id="NaM-HF-nqn"/>
                                                 </connections>
                                             </slider>
                                         </subviews>
