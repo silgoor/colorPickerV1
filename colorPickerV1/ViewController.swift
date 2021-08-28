@@ -30,9 +30,7 @@ class ViewController: UIViewController {
         
         
         //label value
-        labelRedValue.text = stringValue(from: sliderRed)
-        labelGreenValue.text = stringValue(from: sliderGreen)
-        labelBlueValue.text = stringValue(from: sliderBlue)
+        setValue(for: labelRedValue, labelGreenValue, labelBlueValue)
         
         //slider
         sliderRed.minimumTrackTintColor = .red
@@ -50,10 +48,10 @@ class ViewController: UIViewController {
     @IBAction func slidersChangeColor(_ sender: UISlider) {
         SetColor()
         
-        switch sender {
-        case sliderRed: labelRedValue.text = stringValue(from: sliderRed)
-        case sliderGreen: labelGreenValue.text = stringValue(from: sliderGreen)
-        case sliderBlue: labelBlueValue.text = stringValue(from: sliderBlue)
+        switch sender.tag {
+        case 0: labelRedValue.text = stringValue(from: sliderRed)
+        case 1: labelGreenValue.text = stringValue(from: sliderGreen)
+        case 2: labelBlueValue.text = stringValue(from: sliderBlue)
         default:break
         }
 
